@@ -161,7 +161,7 @@ class SearchTransactions extends React.Component {
           </FormGroup>
           <FormGroup className="form-btn-align">
             {formValid ? (
-              <Button outline type="submit">
+              <Button outline color="primary" type="submit">
                 Search Transactions
               </Button>
             ) : (
