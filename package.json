@@ -1,0 +1,41 @@
+{
+  "name": "financial-transactions-info",
+  "version": "1.0.0",
+  "description": "Implement a system that analyses financial transaction records",
+  "main": "index.js",
+  "repository": "localhost",
+  "author": "ARUPPIN",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --write \"src/**/*.js\""
+  },
+  "dependencies": {
+    "@babel/core": "^7.6.2",
+    "@babel/preset-env": "^7.6.2",
+    "@babel/preset-react": "^7.0.0",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^3.2.0",
+    "file-loader": "^4.2.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
+    "moment": "^2.24.0",
+    "papaparse": "^5.1.0",
+    "prettier": "^1.18.2",
+    "react": "^16.9.0",
+    "react-datetime": "^2.16.3",
+    "react-dom": "^16.9.0",
+    "reactstrap": "^8.0.1",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}

@@ -1,0 +1,22 @@
+.container-search {
+  max-width: 500px;
+  margin: 50px auto;
+}
+.search-field {
+  margin: 0 0 1em 0;
+}
+.search-field-label {
+  width: 30%;
+}
+.search-field-input {
+  width: 70%;
+}
+.field-block {
+  display: block;
+}
+.field-inline-block {
+  display: inline-block;
+}
+.form-btn-align {
+  text-align: center;
+}
