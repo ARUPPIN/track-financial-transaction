@@ -5,7 +5,7 @@ import SearchTransactions from "./SearchTransactions/SearchTransactions";
 import TransactionsList from "./TransactionsList/TransactionsList";
 import {
   readCSVFile,
-  accountTransactions,
+  getTransactionsWithAcctId,
   calculateBalance
 } from "../common/utils";
 import "./App.css";
@@ -37,7 +37,7 @@ class App extends React.Component {
     this.setState({ calculatedBalance: 0.0 });
     this.setState({ transactionList: [] });
     this.setState({ showSpinner: true });
-    let filteredTransactions = accountTransactions(
+    let filteredTransactions = getTransactionsWithAcctId(
       this.state.allTransactions,
       accountId,
       stateDate,
@@ -67,7 +67,8 @@ class App extends React.Component {
           />
           {this.state.transactionList.length > 0 ? (
             <h5 className="tr-balance">
-              Available Balance: {this.state.calculatedBalance}
+              Relative Balance: {this.state.calculatedBalance} <br />
+              Number of transactions: {this.state.transactionList.length}
             </h5>
           ) : null}
           <TransactionsList

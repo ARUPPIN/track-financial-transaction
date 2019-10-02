@@ -9,4 +9,4 @@ export const TR_LIST_ITEMS = [
   "Transaction Type",
   "Related Transaction"
 ];
-export const ACCOUNT_ID_FORMAT = "ACC[0-9]{6}";
+export const ACCOUNT_ID_FORMAT = "ACC[0-9]{6}$";

@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TransactionsList snapshot renders 1`] = `
+<div
+  align="center"
+>
+  No Transactions in specified timeframe! Please input values to search for transactions.
+</div>
+`;

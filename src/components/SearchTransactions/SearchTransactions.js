@@ -135,7 +135,8 @@ class SearchTransactions extends React.Component {
               onChange={this.handleFromDateChg}
               inputProps={{
                 placeholder: "Select transaction start date",
-                required: true
+                required: true,
+                className: "field-from-date"
               }}
             />
           </FormGroup>
@@ -155,7 +156,8 @@ class SearchTransactions extends React.Component {
               onChange={this.handleToDateChg}
               inputProps={{
                 placeholder: "Select transaction end date",
-                required: true
+                required: true,
+                className: "field-to-date"
               }}
             />
           </FormGroup>
@@ -170,10 +172,12 @@ class SearchTransactions extends React.Component {
               </Button>
             )}
           </FormGroup>
+          <FormGroup>
+            <div className="panel panel-default">
+              <FormErrors formErrors={this.state.formErrors} />
+            </div>
+          </FormGroup>
         </Form>
-        <div className="panel panel-default">
-          <FormErrors formErrors={this.state.formErrors} />
-        </div>
       </>
     );
   }

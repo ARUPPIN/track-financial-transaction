@@ -12,9 +12,14 @@ export const convertStrToDate = dateStr => {
 };
 
 export const isValidDate = date => {
-  console.log("moment(date).isValid: " + moment(date).isValid());
   return moment(date).isValid();
 };
+
+export const camelCaseToTitle = text => {
+  var result = text.replace(/([A-Z])/g, " $1");
+  return result.charAt(0).toUpperCase() + result.slice(1);
+};
+
 function fetchCsv() {
   return fetch(TRANSACTIONS_CSV_PATH).then(function(response) {
     let reader = response.body.getReader();
@@ -37,27 +42,24 @@ export const readCSVFile = callback => {
   getCsvData(callback);
 };
 
-export const accountTransactions = (trList, accountId, fromDate, toDate) => {
+export const getTransactionsWithAcctId = (
+  trList,
+  accountId,
+  fromDate,
+  toDate
+) => {
   let acctTrWithReversal = trList.filter(trRow => {
     return trRow[1] === accountId;
   });
   let trToBeReversed = acctTrWithReversal.filter(trRow => {
     return trRow[6] !== null && trRow[6] !== "";
   });
-  //console.log("acctTrWithReversal: " + acctTrWithReversal);
   let acctTrInTimeFrame = acctTrWithReversal.filter(trRow => {
     let trDate = convertStrToDate(trRow[3]);
     fromDate = convertStrToDate(fromDate);
     toDate = convertStrToDate(toDate);
-    /*console.log(
-      "trDate: " + trDate + ", fromDate: " + fromDate + ", toDate: " + toDate
-    );
-    console.log("is valid fromDate: " + (trDate >= fromDate));
-    console.log("is valid toDate: " + (trDate <= toDate));
-    console.log("is valid: " + (trDate >= fromDate && trDate <= toDate));*/
     return trDate >= fromDate && trDate <= toDate;
   });
-  //console.log("acctTrInTimeFrame: " + acctTrInTimeFrame);
   let reversedTransactions = acctTrInTimeFrame;
   trToBeReversed.forEach(reversedTr => {
     reversedTransactions = reversedTransactions.filter(trRow => {

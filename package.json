@@ -6,12 +6,28 @@
   "repository": "localhost",
   "author": "ARUPPIN",
   "license": "MIT",
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+    }
+  },
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
     "start": "webpack-dev-server --mode development --open",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"src/**/*.js\""
+    "test": "jest --coverage",
+    "format": "prettier --write \"src/**/*.js\"",
+    "updatesnapshot": "yarn  test -- --updateSnapshot"
   },
   "dependencies": {
     "@babel/core": "^7.6.2",
@@ -20,7 +36,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "babel-cli": "^6.26.0",
     "babel-loader": "^8.0.6",
-    "babel-polyfill": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
@@ -35,7 +50,15 @@
     "react-dom": "^16.9.0",
     "reactstrap": "^8.0.1",
     "webpack": "^4.41.0",
-    "webpack-cli": "^3.3.9",
+    "webpack-cli": "^3.3.9"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "babel-polyfill": "^6.26.0",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
+    "enzyme-to-json": "^3.4.0",
+    "jest": "^24.9.0",
     "webpack-dev-server": "^3.8.1"
   }
 }
