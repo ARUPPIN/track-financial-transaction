@@ -172,7 +172,7 @@ exports[`SearchTransactions snapshot renders 1`] = `
                   2
                 </td>
                 <td
-                  className="rdtDay rdtToday"
+                  className="rdtDay"
                   data-value={3}
                   key="10_3"
                   onClick={[Function]}
@@ -180,7 +180,7 @@ exports[`SearchTransactions snapshot renders 1`] = `
                   3
                 </td>
                 <td
-                  className="rdtDay"
+                  className="rdtDay rdtToday"
                   data-value={4}
                   key="10_4"
                   onClick={[Function]}
@@ -664,7 +664,7 @@ exports[`SearchTransactions snapshot renders 1`] = `
                   2
                 </td>
                 <td
-                  className="rdtDay rdtToday"
+                  className="rdtDay"
                   data-value={3}
                   key="10_3"
                   onClick={[Function]}
@@ -672,7 +672,7 @@ exports[`SearchTransactions snapshot renders 1`] = `
                   3
                 </td>
                 <td
-                  className="rdtDay"
+                  className="rdtDay rdtToday"
                   data-value={4}
                   key="10_4"
                   onClick={[Function]}
