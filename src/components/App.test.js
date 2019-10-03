@@ -2,12 +2,7 @@
 import React from "react";
 import { configure, mount } from "enzyme";
 import { mountToJson } from "enzyme-to-json";
-import babelPolyfill from "babel-polyfill";
-import {
-  readCSVFile,
-  getTransactionsWithAcctId,
-  calculateBalance
-} from "../common/utils";
+import babelPolyfill from "babel-polyfill"; // eslint-disable-line no-undef
 import ReactSixteenAdapter from "enzyme-adapter-react-16";
 import App from "./App";
 configure({ adapter: new ReactSixteenAdapter() });

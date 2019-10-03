@@ -1,8 +1,8 @@
 "use strict";
 jest.mock("papaparse");
-import babelPolyfill from "babel-polyfill";
+import babelPolyfill from "babel-polyfill"; // eslint-disable-line no-undef
 import Papa from "papaparse";
-import { DATE_TIME_FORMAT, TRANSACTIONS_CSV_PATH } from "./constants";
+import { DATE_TIME_FORMAT } from "./constants";
 import {
   convertMillisToDate,
   convertStrToDate,

@@ -71,7 +71,7 @@ class SearchTransactions extends React.Component {
       e.preventDefault();
       const name = e.target.name;
       const value = e.target.value;
-      //Add sufficient validations
+      // Add sufficient validations
       this.setState({ accountId: e.target.value.toString() }, () => {
         this.validateChange(name, value);
       });
@@ -120,7 +120,7 @@ class SearchTransactions extends React.Component {
           </FormGroup>
           <FormGroup>
             <label>From Date: </label>
-            <i className="far fa-calendar-alt"></i>
+            <i className="far fa-calendar-alt" />
             <Datetime
               dateFormat="DD/MM/YYYY"
               timeFormat="HH:mm:ss"
@@ -129,8 +129,8 @@ class SearchTransactions extends React.Component {
                 minutes: { min: 0, max: 59 },
                 seconds: { min: 0, max: 59 }
               }}
-              closeOnTab={true}
-              closeOnSelect={true}
+              closeOnTab
+              closeOnSelect
               value={fromDate}
               onChange={this.handleFromDateChg}
               inputProps={{
@@ -150,8 +150,8 @@ class SearchTransactions extends React.Component {
                 minutes: { min: 0, max: 59 },
                 seconds: { min: 0, max: 59 }
               }}
-              closeOnTab={true}
-              closeOnSelect={true}
+              closeOnTab
+              closeOnSelect
               value={toDate}
               onChange={this.handleToDateChg}
               inputProps={{

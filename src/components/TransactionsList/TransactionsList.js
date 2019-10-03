@@ -5,9 +5,6 @@ import { TR_LIST_ITEMS } from "../../common/constants";
 import "../../styles/TransactionsList.css";
 
 class TransactionsList extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const { transactionList, showSpinner } = this.props;
     return (

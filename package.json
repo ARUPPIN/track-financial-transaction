@@ -27,7 +27,8 @@
     "start": "webpack-dev-server --mode development --open",
     "test": "jest --coverage",
     "format": "prettier --write \"src/**/*.js\"",
-    "updatesnapshot": "yarn  test -- --updateSnapshot"
+    "updatesnapshot": "yarn  test -- --updateSnapshot",
+    "eslint": "standard --fix"
   },
   "dependencies": {
     "@babel/core": "^7.6.2",
@@ -53,12 +54,42 @@
     "webpack-cli": "^3.3.9"
   },
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "babel-jest": "^24.9.0",
     "babel-polyfill": "^6.26.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "enzyme-to-json": "^3.4.0",
     "jest": "^24.9.0",
+    "standard": "9.0.1",
     "webpack-dev-server": "^3.8.1"
+  },
+  "standard": {
+    "ignore": [
+      "/node_modules/",
+      "/npm-packages-cache/",
+      "/public/",
+      "/styles/",
+      "/dist"
+    ],
+    "globals": [
+      "it",
+      "test",
+      "afterAll",
+      "console",
+      "protractor",
+      "browser",
+      "by",
+      "element",
+      "expect",
+      "jest",
+      "describe",
+      "assert",
+      "beforeEach",
+      "afterEach",
+      "fetch",
+      "TextDecoder"
+    ],
+    "parser": "babel-eslint"
   }
 }
