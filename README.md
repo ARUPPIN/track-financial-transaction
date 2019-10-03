@@ -44,7 +44,7 @@ Get into the root directory of the application
 cd track-financial-transaction
 ```
 
-Commands and its use:
+_Commands and its use:_
 
 **yarn build** - Build and start the Financial Trasactions Evaluator from the source
 
@@ -53,3 +53,19 @@ Commands and its use:
 **yarn test** - To start the unit test(s)
 
 **yarn format** - To format the code
+
+## To start local static server:
+
+For environments using Node, the easiest way to handle this would be to install serve
+
+```
+yarn build
+npm install -g serve
+serve -s build
+```
+
+The last command shown above will serve your static site on the port 5000. Like many of serve’s internal settings, the port can be adjusted using the -l or --listen flags:
+
+```
+serve -s build -l 4000
+```
