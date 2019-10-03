@@ -49,14 +49,11 @@ exports[`App snapshot renders 1`] = `
         <label>
           From Date: 
         </label>
-        <i
-          className="far fa-calendar-alt"
-        />
         <div
           className="rdt"
         >
           <input
-            className="field-from-date"
+            className="form-control field-from-date"
             key="i"
             onChange={[Function]}
             onClick={[Function]}
@@ -548,7 +545,7 @@ exports[`App snapshot renders 1`] = `
           className="rdt"
         >
           <input
-            className="field-to-date"
+            className="form-control field-to-date"
             key="i"
             onChange={[Function]}
             onClick={[Function]}

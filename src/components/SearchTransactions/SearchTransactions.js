@@ -120,7 +120,6 @@ class SearchTransactions extends React.Component {
           </FormGroup>
           <FormGroup>
             <label>From Date: </label>
-            <i className="far fa-calendar-alt" />
             <Datetime
               dateFormat="DD/MM/YYYY"
               timeFormat="HH:mm:ss"
@@ -136,7 +135,7 @@ class SearchTransactions extends React.Component {
               inputProps={{
                 placeholder: "Select transaction start date",
                 required: true,
-                className: "field-from-date"
+                className: "form-control field-from-date"
               }}
             />
           </FormGroup>
@@ -157,7 +156,7 @@ class SearchTransactions extends React.Component {
               inputProps={{
                 placeholder: "Select transaction end date",
                 required: true,
-                className: "field-to-date"
+                className: "form-control field-to-date"
               }}
             />
           </FormGroup>
