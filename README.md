@@ -69,3 +69,20 @@ The last command shown above will serve your static site on the port 5000. Like 
 ```
 serve -s build -l 4000
 ```
+
+## Testing:
+
+After starting the application
+
+- Input the AccountId
+- Input the From Date (Clicking on input will show a calander popup, the date selection will close calander, so recommend to select time and then the date).
+- Input the To Date (Clicking on input will show a calander popup, the date selection will close calander, so recommend to select time and then the date).
+
+**Example:**
+
+```
+Provide input fields:
+AccountId: ACC334455
+From: 20/10/2018 12:00:00
+To: 20/10/2018 19:00:00
+```
